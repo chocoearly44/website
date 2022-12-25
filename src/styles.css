@@ -1,0 +1,89 @@
+@import '~animate.css/animate.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Varela+Round&display=swap');
+
+* {
+	font-family: 'Exo', sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+h1.section-title {
+	font-size: 75px;
+	font-weight: bold;
+}
+
+h1.section-subtitle {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+h2.section-title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.darkbg {
+	background: #273036;
+}
+
+/* Social icons */
+.social-icon {
+	color: #636363;
+	fill: #636363;
+	margin: 20px;
+	transition-duration: 0.3s;
+}
+
+.website-icon:hover {
+	color: #0e9406;
+}
+
+.github-icon:hover {
+	color: #000000;
+}
+
+.instagram-icon:hover {
+	color: #E4405F;
+}
+
+.youtube-icon:hover {
+	color: #FF0000;
+}
+
+.twitter-icon:hover {
+	color: #1DA1F2;
+}
+
+.twitch-icon:hover {
+	color: #9147FF;
+}
+
+.stackoverflow-icon:hover {
+	color: #F4842C;
+}
+
+.spigot-icon:hover {
+	color: #F6CA00;
+}
+
+.docker-icon:hover {
+	color: #2496ED;
+}
+
+.vscode-icon:hover {
+	fill: #007ACC;
+}
+
+.steam-icon:hover {
+	color: #213B4C;
+}
+
+.forge-icon:hover {
+	fill: #6441A4;
+}
+
+.spongemc-icon:hover {
+	fill: #F7CF0D;
+}

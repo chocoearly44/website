@@ -1,0 +1,98 @@
+<ng-template #ProjectCard let-project="project">
+	<div class="col-md-4 m-100 d-flex justify-content-center">
+		<div class="card w-100" style="border-radius: 18px">
+			<img [src]="project.icon" class="card-img-top mt-4" height="200px" width="200px">
+
+			<div class="card-body text-center">
+				<h1>{{ project.name }}</h1>
+				<p class="mb-auto">{{ project.description }}</p>
+			</div>
+
+			<div *ngIf="project.links != undefined" class="card-footer d-flex justify-content-center align-items-center">
+				<a *ngIf="project.links.website != undefined" [href]="project.links.website" class="social-icon website-icon" target="_blank">
+					<fa-icon [icon]="faGlobe" size="3x"></fa-icon>
+				</a>
+
+				<a *ngIf="project.links.github != undefined" [href]="project.links.github" class="social-icon github-icon" target="_blank">
+					<fa-icon [icon]="faGithub" size="3x"></fa-icon>
+				</a>
+
+				<a *ngIf="project.links.spigot != undefined" [href]="project.links.spigot" class="social-icon spigot-icon" target="_blank">
+					<fa-icon [icon]="faFaucetDrip" size="3x"></fa-icon>
+				</a>
+
+				<a *ngIf="project.links.docker != undefined" [href]="project.links.docker" class="social-icon docker-icon" target="_blank">
+					<fa-icon [icon]="faDocker" size="3x"></fa-icon>
+				</a>
+
+				<a *ngIf="project.links.vscode != undefined" [href]="project.links.vscode" target="_blank">
+					<svg class="social-icon vscode-icon p-0" height="45px" role="img" viewBox="0 0 24 24" width="45px" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
+					</svg>
+				</a>
+
+				<a *ngIf="project.links.steam != undefined" [href]="project.links.steam" class="social-icon steam-icon" target="_blank">
+					<fa-icon [icon]="faSteam" size="3x"></fa-icon>
+				</a>
+
+				<a *ngIf="project.links.forge != undefined" [href]="project.links.forge" target="_blank">
+					<svg class="social-icon forge-icon" height="70px" role="img" viewBox="0 0 24 24" width="70px" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.307 5.581l.391 1.675H0s.112.502.167.558c.168.279.335.614.559.837 1.06 1.228 2.902 1.73 4.409 2.009 1.06.224 2.121.28 3.181.335l1.228 3.293h.67l.391 1.061h-.558l-.949 3.07h9.321l-.949-3.07h-.558l.39-1.061h.67s.558-3.404 2.288-4.967C21.935 7.758 24 7.535 24 7.535V5.581H6.307zm9.377 8.428c-.447.279-.949.279-1.284.503-.223.111-.335.446-.335.446-.223-.502-.502-.67-.837-.781-.335-.112-.949-.056-1.786-.782-.558-.502-.614-1.172-.558-1.507v-.167c0-.056 0-.112.056-.168.111-.334.39-.669.948-.893 0 0-.39.559 0 1.117.224.335.67.502 1.061.279.167-.112.279-.335.335-.503.111-.39.111-.781-.224-1.06-.502-.446-.613-1.06-.279-1.451 0 0 .112.502.614.446.335 0 .335-.111.224-.223-.056-.167-.782-1.228.279-2.009 0 0 .669-.447 1.451-.391-.447.056-.949.335-1.116.782v.055c-.168.447-.056.949.279 1.396.223.335.502.614.614 1.06-.168-.056-.279 0-.391.112a.533.533 0 00-.112.502c.056.112.168.223.279.223h.168c.167-.055.279-.279.223-.446.112.111.167.391.112.558 0 .167-.112.335-.168.446-.056.112-.167.224-.223.335-.056.112-.112.224-.112.335 0 .112 0 .279.056.391.223.335.67 0 .782-.279.167-.335.111-.726-.112-1.061 0 0 .391.224.67 1.005.223.67-.168 1.451-.614 1.73z" />
+					</svg>
+				</a>
+
+				<a *ngIf="project.links.spongemc != undefined" [href]="project.links.spongemc" target="_blank">
+					<svg class="social-icon spongemc-icon" height="45px" viewBox="0 0 200 200" width="45px" xmlns="http://www.w3.org/2000/svg">
+						<path d="M190 0H10C4.5 0 0 4.5 0 10v180c0 5.5 4.5 10 10 10h16.1c-1.7-45.7-.1-52.5 3.1-57 3.9-5.6 5.5-6.3 11.4-11 5-4 3.2-10.5-.4-15.2-2.2-2.9-5.3-6.3-7.7-9.6-1.5-2.2 2.2-15.1 3.6-19.8 1.4-4.7 3.8-20 24.8-24.1 7.9-1.6 29.6-2.7 44.5-1.8-.1-.6-.3-1.3-.4-2-.3-1.2-.5-2.5-.8-3.9-.3-1.3-.6-2.7-.9-4.1-.3-1.4-.7-2.8-1-4.3-.4-1.5-.7-2.9-1.2-4.4-.8-3-1.8-5.9-3-8.7-.6-1.4-1.2-2.7-1.9-3.9-.7-1.1-1.4-2.1-2-2.5-.1-.1-.2-.2-.3-.2h-.1.2s.1 0 0 0l-.3-.1h-.2l-.4-.1h-.5c-1.3-.1-2.7-.1-4.2 0-2.9.2-6 .8-9 1.5s-5.9 1.6-8.7 2.4c-1.2.4-2.3.8-3.4 1.1.1.9.2 1.7.2 2.6 0 13-10.5 23.5-23.5 23.5S20.6 47.9 20.6 34.9s10.5-23.5 23.5-23.5c8.7 0 16.3 4.7 20.4 11.8 1-.4 2.1-.8 3.2-1.2 2.8-1.1 5.9-2.2 9.1-3.2 3.3-1 6.7-2 10.5-2.5 1.9-.3 3.9-.4 6.1-.3h.8c.3 0 .6.1.8.1H95.7l.3.1h.1l.3.1s.2 0 .3.1l.4.1c.6.2.9.3 1.3.5s.7.3 1.1.5c.7.4 1.3.8 1.9 1.2 1.1.9 2 1.8 2.7 2.7.8.9 1.4 1.8 2 2.7 1.2 1.8 2.1 3.5 2.9 5.2 1.6 3.4 2.9 6.8 3.9 10l1.5 4.8c.5 1.6.8 3.1 1.2 4.6.2.7.4 1.5.5 2.2.2.7.3 1.4.5 2.1.3 1.4.6 2.8.9 4.1.4 2 .7 3.9 1 5.6 22.4 2.2 39.5 5.1 47.2 12.8 11.3 11 20 61 14.3 124.5h10c5.5 0 10-4.5 10-10V10c0-5.5-4.5-10-10-10z" />
+						<path d="M91.4 140.8c-1.3 3.6-2.4 45.7 10 45.7s12.5-43.2 12.1-45.7c-.4-2.4-20.8-3.5-22.1 0zM75 100c-8.5-1.2-13.6 40.2-1.7 42.6 11.2 2.2 10.1-41.4 1.7-42.6zM130.8 100c-8.5-1.2-13.6 40.2-1.7 42.6 11.2 2.2 10.2-41.4 1.7-42.6z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</ng-template>
+
+<div class="row m-0 p-0">
+	<svg class="p-0" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+		<path d="M0,192L60,181.3C120,171,240,149,360,170.7C480,192,600,256,720,261.3C840,267,960,213,1080,208C1200,203,1320,245,1380,266.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" fill="#273036" fill-opacity="1"></path>
+	</svg>
+</div>
+
+<div class="row darkbg text-center align-items-center m-0">
+	<h1 class="section-title text-white">Projects</h1>
+</div>
+
+<div class="row darkbg g-5 p-5 m-0">
+	<ng-template *ngFor="let project of projects"
+				 [ngTemplateOutletContext]="{project: project}"
+				 [ngTemplateOutlet]="ProjectCard">
+	</ng-template>
+</div>
+
+<div class="row darkbg text-center align-items-center pt-4 m-0">
+	<h1 class="section-subtitle text-white">Just for fun</h1>
+</div>
+
+<div class="row darkbg g-5 p-5 m-0">
+	<ng-template *ngFor="let project of forFun"
+				 [ngTemplateOutletContext]="{project: project}"
+				 [ngTemplateOutlet]="ProjectCard">
+	</ng-template>
+</div>
+
+<div class="row darkbg text-center align-items-center pt-4 m-0">
+	<h1 class="section-subtitle text-white">Archived</h1>
+</div>
+
+<div class="row darkbg g-5 p-5 m-0">
+	<ng-template *ngFor="let project of archived"
+				 [ngTemplateOutletContext]="{project: project}"
+				 [ngTemplateOutlet]="ProjectCard">
+	</ng-template>
+</div>
+
+<div class="row m-0 p-0">
+	<svg class="p-0" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+		<path d="M0,224L60,234.7C120,245,240,267,360,256C480,245,600,203,720,170.7C840,139,960,117,1080,122.7C1200,128,1320,160,1380,176L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" fill="#273036" fill-opacity="1"></path>
+	</svg>
+</div>
