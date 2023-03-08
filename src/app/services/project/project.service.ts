@@ -100,13 +100,16 @@ export class ProjectService {
 			icon: "assets/img/projects/epatchistent.svg"
 		},
 		{
-			name: "UnsearchEngine",
-			description: "Searches for everything that you didn't search for.",
-			links: {
-				github: "https://github.com/chocoearly44/UnsearchEngine",
-				website: "https://unsearch.thesuperlab.tk"
-			},
-			icon: "https://raw.githubusercontent.com/chocoearly44/UnsearchEngine/master/src/assets/icon.svg"
+			name: "UserScripts",
+			description: "A collection of my userscripts.",
+			links: {github: "https://github.com/chocoearly44/UserScripts"},
+			icon: "assets/img/projects/userscripts.svg"
+		},
+		{
+			name: "FreenomCalendar",
+			description: "Provides expiration dates for Freenom domains in an ICS format. ",
+			links: {github: "https://github.com/chocoearly44/FreenomCalendar"},
+			icon: "https://raw.githubusercontent.com/chocoearly44/Freenom4J/master/assets/icon.svg"
 		}
 	];
 
@@ -119,6 +122,14 @@ export class ProjectService {
 				spigot: "https://spigotmc.org/resources/orwell-disable-player-reports.103787"
 			},
 			icon: "https://raw.githubusercontent.com/chocoearly44/OrwellSpigot/master/assets/icon.svg"
+		},
+		{
+			name: "UnsearchEngine",
+			description: "Searches for everything that you didn't search for.",
+			links: {
+				github: "https://github.com/chocoearly44/UnsearchEngine"
+			},
+			icon: "https://raw.githubusercontent.com/chocoearly44/UnsearchEngine/master/src/assets/icon.svg"
 		}
 	];
 
