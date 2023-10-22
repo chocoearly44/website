@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Project} from "../../entities/project";
-import {ProjectService} from "../../services/project/project.service";
+import {Project} from "../../../entities/project";
+import {ProjectService} from "../../../services/project/project.service";
 
 import {faDocker, faGithub, faSteam} from '@fortawesome/free-brands-svg-icons';
 import {faFaucetDrip, faGlobe} from "@fortawesome/free-solid-svg-icons";

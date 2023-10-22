@@ -19,12 +19,6 @@ export class ProjectService {
 			icon: "https://raw.githubusercontent.com/chocoearly44/ZapIt/master/assets/icon.svg"
 		},
 		{
-			name: "Freenom4J",
-			description: "Freenom API wrapper for JVM languages. ",
-			links: {github: "https://github.com/chocoearly44/Freenom4J"},
-			icon: "https://raw.githubusercontent.com/chocoearly44/Freenom4J/master/assets/icon.svg"
-		},
-		{
 			name: "Monument",
 			description: "A SpongeForge alternative for Vault Bukkit.",
 			links: {
@@ -104,16 +98,22 @@ export class ProjectService {
 			description: "A collection of my userscripts.",
 			links: {github: "https://github.com/chocoearly44/UserScripts"},
 			icon: "assets/img/projects/userscripts.svg"
+		}
+	];
+
+	archived: Array<Project> = [
+		{
+			name: "Freenom4J",
+			description: "Freenom API wrapper for JVM languages. ",
+			links: {github: "https://github.com/chocoearly44/Freenom4J"},
+			icon: "https://raw.githubusercontent.com/chocoearly44/Freenom4J/master/assets/icon.svg"
 		},
 		{
 			name: "FreenomCalendar",
 			description: "Provides expiration dates for Freenom domains in an ICS format. ",
 			links: {github: "https://github.com/chocoearly44/FreenomCalendar"},
 			icon: "https://raw.githubusercontent.com/chocoearly44/Freenom4J/master/assets/icon.svg"
-		}
-	];
-
-	archived: Array<Project> = [
+		},
 		{
 			name: "Orwell",
 			description: "Spigot chat proxy plugin.",
